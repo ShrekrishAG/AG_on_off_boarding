@@ -1,0 +1,3 @@
+table:
+  name: provisioning_runs
+  schema: public
