@@ -1,0 +1,17 @@
+Command to restart the shell for node and nhost
+\. "$HOME/.nvm/nvm.sh"
+
+Command to add rows to employees using the local hasura webhook linkedincurl -i -X POST "https://local.functions.local.nhost.run/v1/salesforce/employee" \     
+  -H "Content-Type: application/json" \
+  -H "x-webhook-secret: nhost-webhook-secret" \
+  -d '{
+    "Id": "00Qxx0000000002AAB",
+    "FirstName": "Adam",
+    "LastName": "Test",
+    "Email": "test@example.com",
+    "Title": "Project Sales Representative",
+    "Department": "IT",
+    "Location": "Austin",
+    "ManagerName": "Grace Hopper",
+    "StartDate": "2026-03-01"
+  }'
