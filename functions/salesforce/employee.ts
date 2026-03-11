@@ -30,7 +30,7 @@ export default async function handler(req: Request, res: Response) {
 
     // 1) Verify shared secret from Salesforce
     const expected = mustEnv('NHOST_WEBHOOK_SECRET')
-    const received = req.header('x-webhook-secret')
+    const received = req.header('NHOST_WEBHOOK_SECRET')
     return res.json({
       hasReceived: Boolean(received),
       receivedPrefix: received?.slice(0, 4) ?? null,

@@ -18,3 +18,19 @@ curl -i -X POST "https://local.functions.local.nhost.run/v1/salesforce/employee"
   }'
 
   181c4e7926a8307b26a90ebef55cd590c11636a0b35e247b44e2b49898ff26ca - webhook secret
+  my-test-secret-2026 - webhook sceret 03/11/2026
+
+  curl -i -X POST "https://wkwnjrdtjdbrdvwsaxgd.functions.us-east-1.nhost.run/v1/salesforce/employee" \
+  -H "Content-Type: application/json" \
+  -H "x-webhook-secret: my-test-secret-2026" \
+  -d '{
+    "Id": "00Qxx0000000002AAB",
+    "FirstName": "Adam2",
+    "LastName": "Test",
+    "Email": "test2@example.com",
+    "Title": "Project Sales Representative",
+    "Department": "IT",
+    "Location": "Lees Summit",
+    "ManagerName": "Grace Hopper",
+    "StartDate": "2026-03-01"
+  }'
