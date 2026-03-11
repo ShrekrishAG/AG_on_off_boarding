@@ -61,7 +61,8 @@ export default async function handler(req: Request, res: Response) {
     // 3) Upsert into Postgres via Hasura GraphQL
     // For local dev: set NHOST_HASURA_GRAPHQL_URL to https://local.graphql.local.nhost.run/v1/graphql
     const hasuraUrl = mustEnv('NHOST_GRAPHQL_URL')
-    const adminSecret = mustEnv('HASURA_GRAPHQL_ADMIN_SECRET')
+    //const adminSecret = mustEnv('HASURA_GRAPHQL_ADMIN_SECRET')
+    const adminSecret = mustEnv('NHOST_ADMIN_SECRET')
 
     const mutation = `
       mutation UpsertEmployee($object: employees_insert_input!) {
